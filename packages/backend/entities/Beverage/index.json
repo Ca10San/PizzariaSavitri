@@ -13,7 +13,7 @@
       },
       "alcoholic": {
         "label": "Alcoólica",
-        "type": "checkbox",
+        "type": "radio",
         "required": true,
         "values": [
           "Sim",
@@ -22,10 +22,10 @@
       },
       "cost":{
         "label": "Preço de custo",
-        "type": "number",
+        "type": "number"
       },
       "price": {
-        "label": "Preço (S)",
+        "label": "Preço (R$)",
         "type": "number",
         "readonly": false
       }

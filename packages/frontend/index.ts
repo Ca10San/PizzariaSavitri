@@ -24,7 +24,9 @@ const options = {
       children: [
         'dashboard-pizza',
         'dashboard-ingredient',
-        'dashboard-customer'
+        'dashboard-customer',
+        'dashboard-beverage',
+        'dashboard-order'
       ]
     },
     'Configuração': {

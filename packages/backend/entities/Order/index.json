@@ -44,10 +44,10 @@
         }]
       },
       "beverage":{
-          "name":"Bebida",
-          "type":"text",
-          "readonly":"true",
-          "values": [{
+        "label":"Bebida",
+        "type":"text",
+        "readonly":"true",
+        "values": [{
             "__query": {
                 "module": "beverage",
                 "index": [
@@ -56,7 +56,12 @@
                     "price"
                 ]
             }
-          }]
+        }]
+      },
+      "order_datetime": {
+        "label": "Hora do pedido",
+        "type": "datetime",
+        "readonly": "true"
       }
     }
   }
