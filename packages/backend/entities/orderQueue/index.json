@@ -1,0 +1,32 @@
+{
+  "module": "orderQueue",
+  "unicon": "layer-group",
+  "route": true,
+  "report": false,
+  "presets": [
+    "crud"
+  ],
+  "fields": {
+    "orderID": {
+      "label": "Numero do pedido",
+      "type": "number",
+      "readonly": "true",
+      "values": [{
+          "__query": {
+              "module": "order",
+              "index": [ "orderID" ]
+          }
+      }]
+    },
+    "status": {
+      "label": "Situação",
+      "type": "radio",
+      "readonly": "true",
+      "values": [
+        "A fazer",
+        "Fazendo",
+        "Saiu para entrega"
+      ]
+    }
+  }
+}
