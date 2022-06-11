@@ -1,5 +1,6 @@
 import { Mutable } from '@savitri/backend'
-import { PizzaDocument, Pizza } from './pizza.model'
+import { PizzaDocument } from '../interfaces/pizza'
+import { Pizza } from './pizza.model'
 import { default as Description } from './index.json'
 
 /**

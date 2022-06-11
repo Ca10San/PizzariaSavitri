@@ -1,0 +1,36 @@
+{
+    "module": "history",
+    "unicon": "clipboard-alt",
+    "route": true,
+    "report": false,
+    "presets": [
+        "crud"
+    ],
+    "fields": {
+    "customer": {
+        "label": "Cliente",
+        "type": "text",
+        "readonly": "true",
+        "values": [{
+            "__query": {
+                "module": "customer",
+                "index": [ "name" ]
+            }
+        }]
+    },
+    "orderID": {
+        "label": "Numero do pedido",
+        "type": "number",
+        "values": [{
+            "__query": {
+                "module": "order",
+                "index": [ "orderID" ]
+            }
+        }]
+    }
+    },
+    "filters": [
+    "customer",
+    "orderID"
+    ]
+}

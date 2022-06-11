@@ -8,7 +8,7 @@
     ],
     "fields": {
       "name": {
-        "label": "Nome",
+        "label": "Nome da bebida",
         "type": "text"
       },
       "alcoholic": {

@@ -21,13 +21,7 @@
       "address": {
         "label": "Endereço",
         "type": "text",
-        "readonly": "true",
-        "values": [{
-            "__query": {
-                "module": "queue",
-                "index": [ "address" ]
-            }
-        }]
+        "required": true
       },
       "pizza": {
         "label": "Pizza",

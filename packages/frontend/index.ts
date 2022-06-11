@@ -26,7 +26,8 @@ const options = {
         'dashboard-ingredient',
         'dashboard-customer',
         'dashboard-beverage',
-        'dashboard-order'
+        'dashboard-order',
+        'dashboard-history'
       ]
     },
     'Configuração': {

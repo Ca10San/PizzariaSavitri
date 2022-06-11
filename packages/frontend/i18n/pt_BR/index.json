@@ -14,5 +14,6 @@
     "shipmentProvider": "transportadora | transportadoras",
     "business": "empresa | empresas",
     "ingredient": "ingrediente | ingredientes",
-    "beverage": "bedida | bebidas"
+    "beverage": "bedida | bebidas",
+    "history": "histórico | históricos"
 }

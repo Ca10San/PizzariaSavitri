@@ -20,7 +20,7 @@
           "type": "number"
       },
       "allergies":{
-          "":"Alergias",
+          "label":"Alergias",
           "type":"text"
       }
     }
