@@ -1,0 +1,62 @@
+{
+    "module": "order",
+    "unicon": "book-open",
+    "route": true,
+    "report": false,
+    "presets": [
+      "crud"
+    ],
+    "fields": {
+      "customer": {
+        "label": "Cliente",
+        "type": "text",
+        "readonly": "true",
+        "values": [{
+            "__query": {
+                "module": "customer",
+                "index": [ "name" ]
+            }
+        }]
+      },
+      "address": {
+        "label": "Endereço",
+        "type": "text",
+        "readonly": "true",
+        "values": [{
+            "__query": {
+                "module": "queue",
+                "index": [ "address" ]
+            }
+        }]
+      },
+      "pizza": {
+        "label": "Pizza",
+        "type": "text",
+        "readonly": "true",
+        "values": [{
+            "__query": {
+                "module": "pizza",
+                "index": [ 
+                    "name", 
+                    "price_small"  
+                ]
+            }
+        }]
+      },
+      "beverage":{
+          "name":"Bebida",
+          "type":"text",
+          "readonly":"true",
+          "values": [{
+            "__query": {
+                "module": "beverage",
+                "index": [
+                    "name",
+                    "alcoholic",
+                    "price"
+                ]
+            }
+          }]
+      }
+    }
+  }

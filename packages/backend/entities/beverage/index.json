@@ -1,0 +1,33 @@
+{
+    "module": "beverage",
+    "unicon": "glass",
+    "route": true,
+    "report": true,
+    "presets": [
+      "crud"
+    ],
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "type": "text"
+      },
+      "alcoholic": {
+        "label": "Alcoólica",
+        "type": "checkbox",
+        "required": true,
+        "values": [
+          "Sim",
+          "Não"
+        ]
+      },
+      "cost":{
+        "label": "Preço de custo",
+        "type": "number",
+      },
+      "price": {
+        "label": "Preço (S)",
+        "type": "number",
+        "readonly": false
+      }
+    }
+  }

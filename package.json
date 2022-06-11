@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@savitri/common": "*",
+    "@savitri/backend": "*",
+    "@savitri/frontend": "*",
+    "@savitri/components": "*",
+    "@savitri/plugin-referral": "*",
+    "@savitri/plugin-videoroom": "*"
+  }
+}

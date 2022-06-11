@@ -1,0 +1,27 @@
+{
+    "module": "customer",
+    "unicon": "user-exclamation",
+    "route": true,
+    "report": false,
+    "presets": [
+      "crud"
+    ],
+    "fields": {
+      "name": {
+        "label": "Nome Completo",
+        "type": "text"
+      },
+      "address": {
+        "label": "Endereço",
+        "type": "text"
+      },
+      "phone": {
+          "label": "Telefone",
+          "type": "number"
+      },
+      "allergies":{
+          "":"Alergias",
+          "type":"text"
+      }
+    }
+  }

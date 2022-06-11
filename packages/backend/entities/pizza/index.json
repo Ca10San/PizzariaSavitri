@@ -1,0 +1,36 @@
+{
+  "module": "pizza",
+  "unicon": "pizza-slice",
+  "route": true,
+  "report": true,
+  "presets": [
+    "crud"
+  ],
+  "fields": {
+    "name": {
+      "label": "Nome",
+      "type": "text"
+    },
+    "ingredients": {
+      "label": "Ingredientes",
+      "type": "checkbox",
+      "required": true,
+      "values": [
+        {
+          "__query": {
+            "module": "ingredient",
+            "index": [
+              "name",
+              "price"
+            ]
+          }
+        }
+      ]
+    },
+    "price_small": {
+      "label": "Preço (S)",
+      "type": "number",
+      "readonly": false
+    }
+  }
+}

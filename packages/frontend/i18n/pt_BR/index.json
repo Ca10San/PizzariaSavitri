@@ -1,0 +1,17 @@
+{
+    "order": "pedido | pedidos",
+    "orderReview": "revisão de pedido | revisões de pedido",
+    "lateOrder": "pedido em atraso | pedidos em atraso",
+    "failedOrder": "pedido problemático | pedidos problemáticos",
+    "product": "produto | produtos",
+    "productPlan": "plano | planos",
+    "customer": "cliente | clientes",
+    "platform": "plataforma | plataformas",
+    "integration": "integração | integrações",
+    "shipment": "remessa | remessas",
+    "shipmentService": "serviço de remessa | serviço de remessas",
+    "shipmentProfile": "perfil de logística | perfís de logística",
+    "shipmentProvider": "transportadora | transportadoras",
+    "business": "empresa | empresas",
+    "ingredient": "ingrediente | ingredientes"
+}

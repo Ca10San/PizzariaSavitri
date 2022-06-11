@@ -1,0 +1,20 @@
+{
+  "module": "ingredient",
+  "unicon": "chart-pie-alt",
+  "route": true,
+  "report": false,
+  "presets": [
+    "crud"
+  ],
+  "fields": {
+    "name": {
+      "label": "Nome",
+      "type": "text"
+    },
+    "price": {
+      "label": "Custo de fabricação",
+      "description": "Usando pizza gigante como referência",
+      "type": "number"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "",
+  "externals": {
+    "variables": {
+      "productName": "Pizzaria Savitri",
+      "productLogo": "logo.png",
+      "productLogoAlt": "logo-alt.png",
+      "releases": true,
+      "notification": false,
+      "feedback": false
+    }
+  }
+}
