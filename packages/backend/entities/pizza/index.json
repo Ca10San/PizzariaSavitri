@@ -9,7 +9,8 @@
   "fields": {
     "name": {
       "label": "Nome",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "ingredients": {
       "label": "Ingredientes",

@@ -9,7 +9,8 @@
     "fields": {
       "name": {
         "label": "Nome da bebida",
-        "type": "text"
+        "type": "text",
+        "require": "true"
       },
       "alcoholic": {
         "label": "Alcoólica",
@@ -20,9 +21,10 @@
           "Não"
         ]
       },
-      "cost":{
+      "cost":{        
         "label": "Preço de custo",
-        "type": "number"
+        "type": "number",
+        "required": true
       },
       "price": {
         "label": "Preço (R$)",

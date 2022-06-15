@@ -9,15 +9,18 @@
     "fields": {
       "name": {
         "label": "Nome Completo",
-        "type": "text"
+        "type": "text",
+        "required": true
       },
       "address": {
         "label": "Endereço",
-        "type": "text"
+        "type": "text",
+        "required": true
       },
       "phone": {
           "label": "Telefone",
-          "type": "number"
+          "type": "number",
+          "required": true
       },
       "allergies":{
           "label":"Alergias",

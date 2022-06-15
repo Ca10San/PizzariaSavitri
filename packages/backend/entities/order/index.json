@@ -10,7 +10,7 @@
       "customer": {
         "label": "Cliente",
         "type": "text",
-        "readonly": "true",
+        "readonly": true,
         "values": [{
             "__query": {
                 "module": "customer",
@@ -26,7 +26,7 @@
       "pizza": {
         "label": "Pizza",
         "type": "text",
-        "readonly": "true",
+        "readonly": true,
         "values": [{
             "__query": {
                 "module": "pizza",
@@ -40,7 +40,7 @@
       "beverage":{
         "label":"Bebida",
         "type":"text",
-        "readonly":"true",
+        "readonly": true,
         "values": [{
             "__query": {
                 "module": "beverage",
@@ -55,7 +55,7 @@
       "order_datetime": {
         "label": "Hora do pedido",
         "type": "datetime",
-        "readonly": "true"
+        "readonly": true
       }
     }
   }

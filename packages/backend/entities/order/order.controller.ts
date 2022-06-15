@@ -6,10 +6,5 @@ import { default as Description } from './index.json'
 export class OrderController extends Mutable<OrderDocument> {
   constructor() {
     super(Order, Description)
-  }
-
-  testRoute(props):Promise<any> {
-    console.log(props);
-    console.log('isso é um teste!');
-  }
+  }  
 }

@@ -10,7 +10,8 @@
     "customer": {
         "label": "Cliente",
         "type": "text",
-        "readonly": "true",
+        "readonly": true,
+        "required": true,
         "values": [{
             "__query": {
                 "module": "customer",
@@ -21,6 +22,7 @@
     "orderID": {
         "label": "Numero do pedido",
         "type": "number",
+        "required": true,
         "values": [{
             "__query": {
                 "module": "order",

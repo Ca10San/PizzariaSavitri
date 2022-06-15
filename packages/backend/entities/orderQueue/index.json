@@ -10,7 +10,7 @@
     "orderID": {
       "label": "Numero do pedido",
       "type": "number",
-      "readonly": "true",
+      "readonly": true,
       "values": [{
           "__query": {
               "module": "order",
@@ -21,7 +21,7 @@
     "status": {
       "label": "Situação",
       "type": "radio",
-      "readonly": "true",
+      "readonly": true,
       "values": [
         "A fazer",
         "Fazendo",
