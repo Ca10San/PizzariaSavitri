@@ -1,3 +1,5 @@
+//c-home
+
 <template>
   <sv-prose class="mt-4">
     <template #title>Parabéns</template>

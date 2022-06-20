@@ -1,11 +1,11 @@
 <template>
-    <ACard
+    <a-card
     :title="cardTitle"
     :description="cardDescription">
-        <AButton @newClickFunction="cardBtnFunction">
+        <a-button @newClickFunction="cardBtnFunction">
             {{cardBtnText}}
-        </AButton>
-    </ACard>
+        </a-button>
+    </a-card>
 </template>
 
 <script lang="ts">
@@ -17,7 +17,8 @@ export default {
         "cardTitle": String,
         "cardDescription": String,
         "cardBtnText": String,
-        "cardBtnFunction": Function        
+        "cardBtnFunction": Function,
+        "cardBtnArgs": Array
     },
     components: {
         AButton,

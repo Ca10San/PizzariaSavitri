@@ -1,22 +1,22 @@
-<template>
-    <div class="bg-red-400">
-        <div>
-            <ul class="flex justify-center space-x-4">
-                <MClickableCard
-                v-for="(item, index) in pizzas"
-                :key="`pizza-${index}`"            
-                :cardTitle=item.name
-                :cardDescription="item.ingredients"
-                :cardBtnText="btnText"
-                :cardBtnFunction="btnFunction"
-                ></MClickableCard>                
-            </ul>
-        </div>
-    </div>
+<template>            
+    <ul class="flex justify-center space-x-4">
+        <m-clickable-card
+        v-for="(item, index) in pizzas"
+        :key="`pizza-${index}`"            
+        :card-title=item.name
+        :card-description="item.ingredients"
+        :card-btn-text="btnText"
+        :card-btn-function="textSpecificFunction.bind(this, `pizza-${index}`)"
+        :card-btn-args="item"
+        ></m-clickable-card>              
+    </ul>
 </template>
 
 <script lang="ts">
-import MClickableCard from "../components/molecules/m-clickableCard"
+import MClickableCard from "../molecules/m-clickableCard"
+import { useStore } from "vuex"
+
+const store = useStore()
 
 export default {
     data() {
@@ -40,11 +40,16 @@ export default {
         }
     },
     methods: {
+        textSpecificFunction(testData) {
+            console.log(testData)
+            console.log(this.$store)
+            
+        },
         testFunction() {
             fetch('http://localhost:3000/api/test')
                 .then(async response => this.btnText = await response.text())
-            
-            console.log('isso é uma função de teste!') 
+
+            console.log('isso é uma função de teste!')
         }
     },
     components: {

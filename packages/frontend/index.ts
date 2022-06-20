@@ -4,9 +4,12 @@ import { SvMain } from '@savitri/components'
 import { frontend as ReferralModule } from '@savitri/plugin-referral'
 import { frontend as VideoroomModule } from '@savitri/plugin-videoroom'
 
+import { storeExtension } from './modules/internal/store'
+
 import InternalModule from './modules/internal'
 
 const options = {
+  storeExtension,
   i18n: {
     locale: 'pt_BR',
     messages: {
