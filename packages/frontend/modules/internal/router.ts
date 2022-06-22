@@ -14,7 +14,7 @@ export const routerExtension: RouterExtension = {
     {
       name: 'selfservice-home',
       path: '/selfservice/home',
-      component: () => import('./views/v-selfService.vue'),
+      component: () => import('./views/CSelfService'),
       meta: { title: 'Auto-atendimento'}
     }
   ]

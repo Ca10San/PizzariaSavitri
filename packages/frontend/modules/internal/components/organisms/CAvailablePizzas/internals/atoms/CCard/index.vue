@@ -1,4 +1,4 @@
-<template>    
+<template>  
     <div class="rounded-lg shadow-lg bg-white max-w-sm">
         <a href="#!">
             <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
@@ -13,11 +13,10 @@
     </div>    
 </template>
 
-<script lang="ts">
-export default {
-    props: {
-        'title': String,
-        'description': String
-    }
-}
+<script setup lang="ts">
+
+const props = defineProps<{
+    title: string,
+    description: string
+}>()
 </script>

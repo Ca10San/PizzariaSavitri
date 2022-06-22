@@ -1,0 +1,1 @@
+export { default as CClickableCard } from  "./CClickableCard"
