@@ -5,9 +5,5 @@ export class PizzaModule extends Module<{}, {}> {
         super('pizza', {}, {})
     }
 
-    action(this:any) {
-        return {
-            getAllPizzas: this.actionHelper('pizzaGetall', 'ITEM_GET')
-        }
-    }
+    actions() { }
 }

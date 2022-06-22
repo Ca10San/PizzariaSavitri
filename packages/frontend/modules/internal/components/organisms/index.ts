@@ -1,1 +1,1 @@
-export { default as CAvailablePizzas } from "./CAvailablePizzas"
+export { default as CCardsGrid } from "./c-cards-grid"

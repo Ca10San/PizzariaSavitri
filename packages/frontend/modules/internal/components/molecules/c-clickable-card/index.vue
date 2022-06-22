@@ -18,6 +18,6 @@ const props = defineProps<{
     cardDescription: string,
     cardDetailDescription?: string,
     cardBtnText: string,
-    cardBtnFunction: Function,
+    cardBtnFunction: Function
 }>()
 </script>
