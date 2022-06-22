@@ -8,6 +8,9 @@
             <p class="text-gray-700 text-base mb-4">
                 {{ description }}
             </p>
+            <p class="text-zinc-800 text-lg font-semibold mb-4">
+                {{ detailDescription }}
+            </p>
             <slot/>
         </div>
     </div>    
@@ -17,6 +20,7 @@
 
 const props = defineProps<{
     title: string,
-    description: string
+    description: string,
+    detailDescription?: string
 }>()
 </script>

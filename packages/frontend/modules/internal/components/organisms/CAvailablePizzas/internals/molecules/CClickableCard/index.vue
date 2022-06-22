@@ -1,7 +1,8 @@
 <template>
     <c-card
     :title="cardTitle"
-    :description="cardDescription">
+    :description="cardDescription"
+    :detail-description="cardDetailDescription">
         <c-button @click="cardBtnFunction">
             {{cardBtnText}}
         </c-button>
@@ -15,6 +16,7 @@ import { CCard } from "../../atoms"
 const props = defineProps<{
     cardTitle: string,
     cardDescription: string,
+    cardDetailDescription?: string,
     cardBtnText: string,
     cardBtnFunction: Function,
 }>()

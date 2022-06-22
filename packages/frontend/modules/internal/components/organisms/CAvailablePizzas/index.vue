@@ -5,8 +5,9 @@
         :key="item._id"
         :cardTitle="item.name"
         :cardDescription="buildDescription(item.ingredients)"
+        :cardDetailDescription="buildPricing(item.price_small)"
         cardBtnText="Adicionar"
-        :card-btn-function="textSpecificFunction.bind(this, pizzaModule.items)"
+        :card-btn-function="textSpecificFunction.bind(this, pizzaModule)"
         ></c-clickable-card>              
     </ul>
 </template>
@@ -25,16 +26,20 @@ onMounted(() => {
     pizzaModule.getAll();
 })
 
-const textSpecificFunction = (testData) => {
+function textSpecificFunction(testData) {
     console.log(testData);
 }
 
-const buildDescription = (ingredients: Array<Object<T>>) => {
+function buildDescription(ingredients: Array<Object<T>>) {
     const builtDescription = ingredients.reduce((result, ingredient) => {                
         return result === "" ? ingredient.name : `${result}, ${ingredient.name}`;
     }, "");
 
     return builtDescription;
+}
+
+function buildPricing(price: Number) {
+    return `R$ ${price}`;
 }
 
 const {
