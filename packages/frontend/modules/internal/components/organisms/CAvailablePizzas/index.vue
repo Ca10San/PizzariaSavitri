@@ -1,12 +1,12 @@
 <template>        
     <ul class="flex justify-center space-x-4">
         <c-clickable-card
-        v-for="(item, index) in items.pizzas"
-        :key="`pizza-${index}`"
+        v-for="(item) in items"
+        :key="item._id"
         :cardTitle="item.name"
-        :cardDescription="item.ingredients"
-        :cardBtnText="items.btnText"
-        :card-btn-function="textSpecificFunction.bind(this, `pizza-${index}`)"
+        :cardDescription="buildDescription(item.ingredients)"
+        cardBtnText="Adicionar"
+        :card-btn-function="textSpecificFunction.bind(this, pizzaModule.items)"
         ></c-clickable-card>              
     </ul>
 </template>
@@ -15,41 +15,29 @@
 import { CClickableCard } from "./internals/molecules"
 import { useStore } from "vuex"
 import { reactive, onMounted } from "vue"
-import { useModule } from "@savitri/frontend"
+import { useModule, toRefs } from "@savitri/frontend"
 
 const store = useStore()
-const orderModule = reactive(useModule('order', store))
-const pizzaModule = reactive(useModule('pizza', store))
+const orderModule = reactive(useModule('order', store));
+const pizzaModule = reactive(useModule('pizza', store));
 
 onMounted(() => {
-    pizzaModule.getAll()
-    console.log(pizzaModule);
+    pizzaModule.getAll();
 })
-
-const items = {
-    "pizzas": [{
-            "name": "Pizza1",
-            "ingredients": "kejo,seboulah",
-        },
-        {
-            "name": "Pizza2",
-            "ingredients": "kalabriza,fejon",
-        },
-        {
-            "name": "Pizza3",
-            "ingredients": "frango,assucar",
-        }],
-    "btnText": "Escolher",
-}
 
 const textSpecificFunction = (testData) => {
     console.log(testData);
 }
 
-// function testFunction() {
-//     fetch('http://localhost:3000/api/test')
-//         .then(async response => this.btnText = await response.text())
+const buildDescription = (ingredients: Array<Object<T>>) => {
+    const builtDescription = ingredients.reduce((result, ingredient) => {                
+        return result === "" ? ingredient.name : `${result}, ${ingredient.name}`;
+    }, "");
 
-//     console.log('isso é uma função de teste!')
-// }
+    return builtDescription;
+}
+
+const {
+    items
+} = toRefs(pizzaModule);
 </script>
