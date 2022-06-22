@@ -1,5 +1,5 @@
 import { mongoose, options, descriptionToSchema } from "@savitri/backend"
-import { HistoryDocument } from "../interfaces/history"
+import { HistoryDocument } from "./history.controller"
 import { default as Description } from "./index.json"
 
 import "../customer/customer.model"

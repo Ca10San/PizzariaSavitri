@@ -1,8 +1,8 @@
-import { mongoose, options, descriptionSchema } from "@savitri/backend"
-import { OrderQueueDocument } from "../interfaces/orderQueue"
+import { mongoose, options, descriptionToSchema } from "@savitri/backend"
+import { OrderQueueDocument } from "./orderQueue.controller"
 import { default as Description } from "./index.json"
 
 import "../order/order.model"
 
-export const OrderQueueSchema = descriptionSchema<OrderQueueDocument>(Description, options)
+export const OrderQueueSchema = descriptionToSchema<OrderQueueDocument>(Description, options)
 export const OrderQueue = mongoose.model<OrderQueueDocument>('OrderQueue', OrderQueueSchema)

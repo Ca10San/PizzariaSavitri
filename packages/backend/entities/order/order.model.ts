@@ -1,5 +1,5 @@
 import { mongoose, options, descriptionToSchema } from '@savitri/backend'
-import { OrderDocument } from "../interfaces/order"
+import { OrderDocument } from "./order.controller"
 import { default as Description } from './index.json'
 
 import "../customer/customer.model"

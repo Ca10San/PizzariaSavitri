@@ -1,6 +1,6 @@
-import { Mutable } from '@savitri/backend'
-import { PizzaDocument } from '../interfaces/pizza'
+import { Mutable, mongoose } from '@savitri/backend'
 import { Pizza } from './pizza.model'
+import { IngredientDocument } from '../ingredient/ingredient.controller'
 import { default as Description } from './index.json'
 
 /**
@@ -8,6 +8,12 @@ import { default as Description } from './index.json'
     @copyright Protolab Systems
     Pizzas disponíveis no cardápio do estabelecimento. O usuário cadastra o nome da pizza e os ingredientes e o preço é automaticamente calculado.
 */
+
+export interface PizzaDocument extends mongoose.Document {
+  name: string
+  ingredients: IngredientDocument[]
+  price_small: number
+}
 
 export class PizzaController extends Mutable<PizzaDocument> {
   constructor() {

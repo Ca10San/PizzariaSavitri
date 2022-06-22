@@ -1,5 +1,4 @@
-import { Mutable } from '@savitri/backend'
-import { BeverageDocument } from "../interfaces/beverage"
+import { Mutable, mongoose } from '@savitri/backend'
 import { Beverage } from './beverage.model'
 import { default as Description } from './index.json'
 
@@ -8,6 +7,13 @@ import { default as Description } from './index.json'
     @copyright Protolab Systems
     undocumented
 */
+
+export interface BeverageDocument extends mongoose.Document {
+  name: string,
+  alcoholic: string,
+  cost: number,
+  price: number
+}
 
 export class BeverageController extends Mutable<BeverageDocument> {
   constructor() {
