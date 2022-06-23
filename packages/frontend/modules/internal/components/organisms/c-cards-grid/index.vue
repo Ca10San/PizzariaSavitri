@@ -6,16 +6,13 @@
                 v-bind="{ 
                     ...card, 
                     cardBtnText,
-                    cardBtnFunction: (typeof card.cardBtnFunction == 'undefined') ? 
-                        cardBtnFunction : 
-                        card.cardBtnFunction
+                    cardBtnFunction: card.cardBtnFunction || cardBtnFunction
                 }"
         ></c-clickable-card>              
     </ul>
 </template>
 
 <script setup lang="ts">
-            // :card-btn-function="typeof card.cardBtnFunction == 'undefined' ? cardBtnFunction : card.cardBtnFunction"
 import { CClickableCard } from "../../molecules"
 import { onMounted } from "vue"
 
