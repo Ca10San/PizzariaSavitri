@@ -1,28 +1,33 @@
 <template>    
     <ul class="flex justify-center space-x-4">
         <c-clickable-card
-        v-for="(card) in cards"
-        :key="card.cardKey"
-        :card-title="card.cardTitle"
-        :card-description="card.cardDescription"
-        :card-detail-description="card.cardDetailDescription"
-        :card-btn-text="cardBtnText"
-        :card-btn-function="cardBtnFunction"
+            v-for="(card) in cards"
+                :key="card.cardKey"
+                v-bind="{ 
+                    ...card, 
+                    cardBtnText,
+                    cardBtnFunction: (typeof card.cardBtnFunction == 'undefined') ? 
+                        cardBtnFunction : 
+                        card.cardBtnFunction
+                }"
         ></c-clickable-card>              
     </ul>
 </template>
 
 <script setup lang="ts">
+            // :card-btn-function="typeof card.cardBtnFunction == 'undefined' ? cardBtnFunction : card.cardBtnFunction"
 import { CClickableCard } from "../../molecules"
+import { onMounted } from "vue"
 
 const props = defineProps<{
     cards: Array<{
         cardKey: string,
         cardTitle: string,
         cardDescription: string,
-        cardDetailDescription?: string
+        cardDetailDescription?: string,
+        cardBtnFunction?: Function
     }>,
     cardBtnText: string,
-    cardBtnFunction: Function
+    cardBtnFunction?: Function
 }>();
 </script>

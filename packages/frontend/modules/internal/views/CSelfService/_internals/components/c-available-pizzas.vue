@@ -2,9 +2,8 @@
     <h2 class="text-xl text-slate-100 text-semibold">Pizzas</h2>
     <ul class="flex justify-center space-x-4">
         <c-cards-grid
-        :cards="buildCardsList(items)"
-        cardBtnText="Adicionar"
-        :card-btn-function="textSpecificFunction.bind(this, pizzaModule)"
+            :cards="buildCardsList(items)"
+            cardBtnText="Adicionar"
         ></c-cards-grid>
     </ul>
 </template>
@@ -17,6 +16,7 @@ import { useStore } from "vuex"
 import { CCardsGrid } from "../../../../components/organisms"
 
 const store = useStore()
+const orderModule = reactive(useModule('order', store));
 const pizzaModule = reactive(useModule('pizza', store));
 
 onMounted(() => {
@@ -28,6 +28,8 @@ const {
 } = toRefs(pizzaModule);
 
 function textSpecificFunction(testData) {
+    console.log(this);
+      
     console.log(testData);
 }
 
@@ -49,7 +51,8 @@ function buildCardsList(itemsList) {
             cardKey: item._id,
             cardTitle: item.name,
             cardDescription: buildDescription(item.ingredients),
-            cardDetailDescription: item.price_small
+            cardDetailDescription: buildPricing(item.price_small.toString()),
+            cardBtnFunction: textSpecificFunction.bind(this, item.name)
         };
 
         result.push(newCardIndex);        

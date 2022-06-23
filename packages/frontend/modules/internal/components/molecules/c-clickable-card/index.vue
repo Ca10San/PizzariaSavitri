@@ -1,8 +1,9 @@
 <template>
     <c-card
-    :title="cardTitle"
-    :description="cardDescription"
-    :detail-description="cardDetailDescription">
+        :title="cardTitle"
+        :description="cardDescription"
+        :detail-description="cardDetailDescription"
+    >
         <c-button @click="cardBtnFunction">
             {{cardBtnText}}
         </c-button>
