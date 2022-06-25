@@ -16,7 +16,7 @@ import { useStore } from 'vuex'
 import { CCardsGrid } from '../../../../components/organisms'
 
 const store = useStore()
-const orderModule = reactive(useModule('order', store))
+const selfServiceOrderModule = reactive(useModule('selfServiceOrderModule', store))
 const pizzaModule = reactive(useModule('pizza', store))
 
 onMounted(() => {
@@ -27,8 +27,16 @@ const {
     items
 } = toRefs(pizzaModule)
 
-const textSpecificFunction = (testData) => {
-    console.log(this.store)
+const textSpecificFunction = async (testData) => {
+    // await store.dispatch('selfServiceOrderModule/insert', {
+    //     payload: { "testIndex": "é nois no cloud" }
+    // })
+    // console.log(selfServiceOrderModule)
+    selfServiceOrderModule.insert({
+        payload: { "testIndex": "é nois no cloud" }
+    })
+    console.log(store);
+    
     console.log(testData)
 }
 

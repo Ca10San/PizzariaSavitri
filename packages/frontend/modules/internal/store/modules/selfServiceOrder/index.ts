@@ -5,5 +5,7 @@ export class SelfServiceOrderModule extends Module<{}, {}> {
         super('selfServiceOrder', {}, {})
     }
 
-   actions() {}
+   actions() {
+    
+   }
 }

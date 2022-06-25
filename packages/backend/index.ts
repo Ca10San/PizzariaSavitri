@@ -3,7 +3,7 @@ import { init } from '@savitri/backend'
 import { backend as ReferralModule } from '@savitri/plugin-referral'
 import { backend as VideoroomModule } from '@savitri/plugin-videoroom'
 
-import { testHandler } from "./api/testHandler"
+import { testHandler } from './api/testHandler'
 
 const config = {
   modules: [

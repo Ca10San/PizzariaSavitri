@@ -1,5 +1,5 @@
 import { mongoose, options, descriptionToSchema } from '@savitri/backend'
-import { PizzaDocument } from "./pizza.controller"
+import { PizzaDocument } from './pizza.controller'
 import { default as Description } from './index.json'
 
 import '../ingredient/ingredient.model'
