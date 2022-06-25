@@ -1,1 +1,1 @@
-export { default as CSelfService } from "./CSelfService"
+export { default as CSelfService } from './CSelfService'

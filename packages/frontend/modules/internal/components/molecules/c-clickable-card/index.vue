@@ -11,8 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import { CButton } from "../../atoms"
-import { CCard } from "../../atoms"
+import { CButton } from '../../atoms'
+import { CCard } from '../../atoms'
 
 const props = defineProps<{
     cardTitle: string,

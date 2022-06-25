@@ -28,5 +28,5 @@
 </template>
 
 <script setup lang="ts">
-    const emit = defineEmits<{ name: 'click' }>() 
+const emit = defineEmits<{ name: 'click' }>() 
 </script>

@@ -1,6 +1,6 @@
 import { StoreExtension } from 'frontend/store'
-import { OrderModule } from './modules/order'
+import { SelfServiceOrderModule } from './modules/selfServiceOrder'
 
 export const storeExtension: StoreExtension = {
-  order: (new OrderModule as any).module
+  order: (new SelfServiceOrderModule as any).module
 }

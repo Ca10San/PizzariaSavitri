@@ -1,1 +1,1 @@
-export { default as CAvailablePizzas } from "./c-available-pizzas"
+export { default as CAvailablePizzas } from './c-available-pizzas'

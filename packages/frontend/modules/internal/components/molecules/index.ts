@@ -1,1 +1,1 @@
-export { default as CClickableCard } from  "./c-clickable-card"
+export { default as CClickableCard } from  './c-clickable-card'

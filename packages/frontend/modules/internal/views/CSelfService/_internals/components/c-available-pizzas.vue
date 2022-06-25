@@ -1,14 +1,14 @@
 <template>
-    <h2 class='text-xl text-slate-100 text-semibold'>Pizzas</h2>
-    <ul class='flex justify-center space-x-4'>
+    <h2 class="text-xl text-slate-100 text-semibold">Pizzas</h2>
+    <ul class="flex justify-center space-x-4">
         <c-cards-grid
             :cards='buildCardsList(items)'
-            cardBtnText='Adicionar'
+            cardBtnText="Adicionar"
         ></c-cards-grid>
     </ul>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import { useModule, toRefs } from '@savitri/frontend'
 import { reactive, onMounted } from 'vue'
 import { useStore } from 'vuex'
@@ -27,20 +27,20 @@ const {
     items
 } = toRefs(pizzaModule)
 
-async function textSpecificFunction(testData) {
+const textSpecificFunction = (testData) => {
     console.log(this.store)
     console.log(testData)
 }
 
-function buildDescription(ingredients: Array<Object<T>>) {
+const buildDescription = (ingredients: Array<Object<T>>) => {
     return ingredients.map((item) => item.name).join(', ')
 }
 
-function buildPricing(price: Number) {
-    return `R$ ${price}`;
+const buildPricing = (price: Number) => {
+    return `R$ ${price}`
 }
 
-function buildCardsList(itemsList) {
+const buildCardsList = (itemsList: Array<Object<T>>) => {
     return itemsList.map((item) => ({
         cardKey: item._id,
         cardTitle: item.name,
@@ -49,5 +49,4 @@ function buildCardsList(itemsList) {
         cardBtnFunction: textSpecificFunction.bind(this, item.name)
     }))
 }
-
 </script>

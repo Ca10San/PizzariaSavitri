@@ -1,5 +1,5 @@
 import { mongoose, options, descriptionToSchema } from '@savitri/backend'
-import { BeverageDocument } from "./beverage.controller"
+import { BeverageDocument } from './beverage.controller'
 import { default as Description } from './index.json'
 
 // no document imports

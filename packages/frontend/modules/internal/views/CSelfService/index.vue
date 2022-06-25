@@ -10,5 +10,5 @@
 </template>
 
 <script setup lang="ts">
-import { CAvailablePizzas } from "./_internals/components"
+import { CAvailablePizzas } from './_internals/components'
 </script>
