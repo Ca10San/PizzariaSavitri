@@ -1,5 +1,5 @@
-import { Mutable, mongoose } from '@savitri/backend'
-import { Customer } from './customer.model'
+import { Mutable } from '@savitri/backend'
+import { Customer, CustomerDocument } from './customer.model'
 import { default as Description } from './index.json'
 
 /**
@@ -7,13 +7,6 @@ import { default as Description } from './index.json'
     @copyright Protolab Systems
     undocumented
 */
-
-export interface CustomerDocument extends mongoose.Document {
-  name: string,
-  address: string,
-  phone: number,
-  allergies: string
-}
 
 export class CustomerController extends Mutable<CustomerDocument> {
   constructor() {

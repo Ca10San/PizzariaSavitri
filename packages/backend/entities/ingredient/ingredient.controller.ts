@@ -1,5 +1,5 @@
-import { Mutable, mongoose } from '@savitri/backend'
-import { Ingredient } from './ingredient.model'
+import { Mutable } from '@savitri/backend'
+import { Ingredient, IngredientDocument } from './ingredient.model'
 import { default as Description } from './index.json'
 
 /**
@@ -7,11 +7,6 @@ import { default as Description } from './index.json'
     @copyright Protolab Systems
     undocumented
 */
-
-export interface IngredientDocument extends mongoose.Document {
-  name: string,
-  price: number
-}
 
 export class IngredientController extends Mutable<IngredientDocument> {
   constructor() {

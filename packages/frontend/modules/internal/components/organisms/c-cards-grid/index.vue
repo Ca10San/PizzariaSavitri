@@ -14,7 +14,6 @@
 
 <script setup lang="ts">
 import { CClickableCard } from '../../molecules'
-import { onMounted } from 'vue'
 
 const props = defineProps<{
     cards: Array<{
