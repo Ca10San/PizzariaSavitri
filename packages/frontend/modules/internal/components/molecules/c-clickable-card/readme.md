@@ -8,7 +8,10 @@
 cardTitle: string,
 cardDescription: string,
 cardDetailDescription?: string,
+cardImgAddress? string,
 ```
+
+If you dont send any image address in props, the card will still be rendered, but without an image on top.
 
 ### Button specific
 

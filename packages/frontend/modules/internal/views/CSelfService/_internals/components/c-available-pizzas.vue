@@ -27,41 +27,38 @@ const {
    items
 } = toRefs(pizzaModule)
 
-const textSpecificFunction = async (testData) => {
-    // await store.dispatch('selfServiceOrder/insert', {
-    //     payload: { "testIndex": "é nois no cloud" }
-    // })
-   
-    await store.dispatch('selfServiceOrder/insertPizza', { payload: {
-        pizza: {
-            name: "test",
-            ingredients: {
-                dorime: "keijo",
-                din: "marrocos",
-                marilene: "tainha"
-            }
-        }
-    }})
-    console.log(store);
-    
-    console.log(testData)
+const addToCart = async (pizzaData) => {   
+   const pizzasList = selfServiceOrderModule.items[0].pizzas
+
+   const newPizza = {    
+      _id: pizzaData._id,
+      name: pizzaData.name,
+      pricing: pizzaData.price_small
+   }
+
+   const newPizzasList = pizzasList.concat(newPizza)
+
+   await store.dispatch('selfServiceOrder/insertPizza', { 
+      payload: newPizzasList 
+   })  
 }
 
 const buildDescription = (ingredients: Array<Object<T>>) => {
-    return ingredients.map((item) => item.name).join(', ')
+   return ingredients.map((item) => item.name).join(', ')
 }
 
 const buildPricing = (price: Number) => {
-    return `R$ ${price}`
+   return `R$ ${price}`
 }
 
 const buildCardsList = (itemsList: Array<Object<T>>) => {
-    return itemsList.map((item) => ({
-        cardKey: item._id,
-        cardTitle: item.name,
-        cardDescription: buildDescription(item.ingredients),
-        cardDetailDescription: buildPricing(item.price_small.toString()),
-        cardBtnFunction: textSpecificFunction.bind(this, item.name)
-    }))
+   return itemsList.map((item) => ({
+      cardKey: item._id,
+      cardTitle: item.name,
+      cardDescription: buildDescription(item.ingredients),
+      cardDetailDescription: buildPricing(item.price_small.toString()),
+      cardImgAddress: "https://mdbootstrap.com/img/new/standard/nature/184.jpg",
+      cardBtnFunction: addToCart.bind(this, item)
+   }))
 }
 </script>
