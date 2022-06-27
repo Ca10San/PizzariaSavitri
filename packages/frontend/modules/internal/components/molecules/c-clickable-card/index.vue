@@ -3,6 +3,7 @@
         :title="cardTitle"
         :description="cardDescription"
         :detail-description="cardDetailDescription"
+        :img-address="cardImgAddress"
     >
         <c-button @click="cardBtnFunction">
             {{cardBtnText}}
@@ -18,6 +19,7 @@ const props = defineProps<{
     cardTitle: string,
     cardDescription: string,
     cardDetailDescription?: string,
+    cardImgAddress?: string, 
     cardBtnText: string,
     cardBtnFunction: Function
 }>()

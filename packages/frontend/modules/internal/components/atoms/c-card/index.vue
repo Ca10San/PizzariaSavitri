@@ -1,12 +1,11 @@
 <template>  
-    <div class="rounded-lg shadow-lg bg-white max-w-sm">
-        <a href="#!">
-            <img 
-                class="rounded-t-lg"
-                src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" 
-                alt=""
-            />
-        </a>
+   <div class="rounded-lg shadow-lg bg-white max-w-sm">        
+      <img 
+         v-if="imgAddress"
+         class="rounded-t-lg"
+         :src="imgAddress"
+         alt=""
+        />        
         <div class="p-6">
             <h5 class="text-gray-900 text-xl font-medium mb-2">{{ title }}</h5>
             <p class="text-gray-700 text-base mb-4">
@@ -21,10 +20,10 @@
 </template>
 
 <script setup lang="ts">
-
 const props = defineProps<{
-    title: string,
-    description: string,
-    detailDescription?: string
+   title: string,
+   description: string,
+   detailDescription?: string,
+   imgAddress?: string
 }>()
 </script>

@@ -16,14 +16,15 @@
 import { CClickableCard } from '../../molecules'
 
 const props = defineProps<{
-    cards: Array<{
-        cardKey: string,
-        cardTitle: string,
-        cardDescription: string,
-        cardDetailDescription?: string,
-        cardBtnFunction?: Function
-    }>,
-    cardBtnText: string,
-    cardBtnFunction?: Function
+   cards: Array<{
+      cardKey: string,
+      cardTitle: string,
+      cardDescription: string,
+      cardDetailDescription?: string,
+      cardImgAddress?: string,
+      cardBtnFunction?: Function
+   }>,
+cardBtnText: string,
+cardBtnFunction?: Function
 }>()
 </script>
