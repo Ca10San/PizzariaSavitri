@@ -1,5 +1,5 @@
 <template>
-    <h2 class="text-xl text-slate-100 text-semibold">Pizzas</h2>
+    <h2 class="text-3xl leading-tight mb-4 pb-4 border-b text-slate-100 text-semibold text-slate-100 text-semibold">Pizzas</h2>
     <ul class="flex justify-center space-x-4">
         <c-cards-grid
             :cards='buildCardsList(items)'

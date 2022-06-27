@@ -13,12 +13,15 @@ export class SelfServiceOrderModule extends Module<{}, {}> {
    actions() {
       return {
         insertPizza: ({ commit }: ActionProps, { payload }: any) => {
-            const { pizzasList } = payload
-
             commit('ITEM_INSERT', { 
                result: { pizzas: payload }
             })
-        }
+        },
+        insertBeverage: ({ commit }: ActionProps, { payload }: any) => {
+           commit('ITEM_INSERT', { 
+              result: { beverages: payload }
+           })
+        },
       }
    }
 }
